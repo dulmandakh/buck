@@ -62,7 +62,6 @@ jobs:
   integration:
     <<: *defaults
     environment:
-      NDK_HOME: ${HOME}/android-ndk-linux"
       CI_ACTION: integration
       GROOVY_HOME: /usr/share/groovy/
 
@@ -73,6 +72,7 @@ jobs:
       - run:
           name: Setup NDK
           command: |
+            export NDK_HOME = ${HOME}/android-ndk-linux"
             mkdir -p ${NDK_HOME}
             ./scripts/travisci_install_android_ndk.sh
       - run: *run-ci-script
