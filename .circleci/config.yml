@@ -62,7 +62,7 @@ jobs:
   integration:
     <<: *defaults
     environment:
-      NDK_HOME: ~/android-ndk-linux"
+      NDK_HOME: ${HOME}/android-ndk-linux"
       CI_ACTION: integration
       GROOVY_HOME: /usr/share/groovy/
 
