@@ -73,7 +73,7 @@ jobs:
       - run:
           name: Setup NDK
           command: |
-            mkdir ${NDK_HOME}
+            mkdir -p ${NDK_HOME}
             ./scripts/travisci_install_android_ndk.sh
       - run: *run-ci-script
 
