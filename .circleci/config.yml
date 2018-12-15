@@ -21,6 +21,7 @@ aliases:
     name: Run CI script
     command: |
       echo '-Xmx500m' > .buckjavaargs.local
+      export NDK_HOME=${HOME}/android-ndk-linux
       ./scripts/travisci_run.sh
 
 references:
