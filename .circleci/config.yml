@@ -79,4 +79,8 @@ workflows:
   version: 2
   build_and_test:
     jobs:
-      - integration:
+      # - build
+      # - unit:
+      #     requires:
+      #       - build
+      - integration
